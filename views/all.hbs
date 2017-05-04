@@ -1,0 +1,9 @@
+
+
+<ul class="list-group">
+  {{#each todos}}
+    <a href='/todo/{{id}}' class="list-group-item">{{title}}</li>
+
+  {{/each}}
+  <a type='button' class='btn btn-primary' href="/todo/new">New Todo</a>
+</ul>

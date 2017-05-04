@@ -1,0 +1,23 @@
+<form class="form" action="/todo/{{id}}?_method=PUT" method="post">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class='form-control' id='title' name="title" value='{{title}}'>
+  </div>
+  <div class="form-group">
+    <label for="title">Description</label>
+    <textarea type="text" class='form-control' id='description' name="description" value='{{description}}'></textarea>
+  </div>
+  <div class="form-group">
+    <label for="priority">Priority</label>
+    <select value='{{priority}}' class="form-control" id='priority' name='priority'>
+      {{#select priority}}
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      {{/select}}
+    </select>
+  </div>
+  <button type="submit" class="btn btn-default btn-danger">Update</button>
+</form>
